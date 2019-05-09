@@ -7,15 +7,16 @@
     <id>spx</id>
     <version>6.8.2</version>
     <packageSourceUrl>https://github.com/thiagoeh/chocolatey</packageSourceUrl>
-    <owners>Thiago Hickmann</owners>-->
+    <owners>Thiago Hickmann</owners>
     <title>StorageCraft ShadowProtect SPX</title>
     <authors>StorageCraft</authors>
     <projectUrl>https://www.storagecraft.com/downloads/trials-updates</projectUrl>
-    <iconUrl>https://cdn.jsdelivr.net/gh/thiagoeh/chocolatey@master/storagecraft/icons/shadow-protect.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/thiagoeh/chocolatey@master/storagecraft/icons/shadow-protect-spx.png</iconUrl>
     <licenseUrl>https://support.storagecraft.com/s/article/spx-licensing-options</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <docsUrl>https://support.storagecraft.com/s/article/shadowprotect-spx-user-guide</docsUrl>
     <tags>storagecraft shadowprotect spx backup</tags>
+	<description>Physical or virtual, Windows or Linux, you won't find a faster, more reliable way to recover systems and data.</description>
     <summary>StorageCraft ShadowProtect SPX is a backup software that protect at the volume level, taking snapshots of protected devices.</summary>
   </metadata>
   <files>

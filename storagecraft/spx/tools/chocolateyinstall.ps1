@@ -15,13 +15,13 @@ $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 #$fileLocation = '\\SHARE_LOCATION\to\INSTALLER_FILE'
 # Community Repo: Use official urls for non-redist binaries or redist where total package size is over 200MB
 # Internal/Organization: Download from internal location (internet sources are unreliable)
-$url        = '' # download url, HTTPS preferred
-$url64      = '' # 64bit URL here (HTTPS preferred) or remove - if installer contains both (very rare), use $url
+$url        = 'https://downloads.storagecraft.com/SP_Files/ShadowProtect_SPX-6.8.2-2_x86.msi' # download url, HTTPS preferred
+$url64      = 'https://downloads.storagecraft.com/SP_Files/ShadowProtect_SPX-6.8.2-2_x64.msi' # 64bit URL here (HTTPS preferred) or remove - if installer contains both (very rare), use $url
 
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
   unzipLocation = $toolsDir
-  fileType      = 'EXE_MSI_OR_MSU' #only one of these: exe, msi, msu
+  fileType      = 'msi' #only one of these: exe, msi, msu
   url           = $url
   url64bit      = $url64
   #file         = $fileLocation
@@ -32,14 +32,15 @@ $packageArgs = @{
   # To determine checksums, you can get that from the original site if provided. 
   # You can also use checksum.exe (choco install checksum) and use it 
   # e.g. checksum -t sha256 -f path\to\file
-  checksum      = ''
+  checksum      = '4E847BD62CE8550A586F7F633EEE70D18A389DF3F0E4CAE5941DD7F298AA403D'
   checksumType  = 'sha256' #default is md5, can also be sha1, sha256 or sha512
-  checksum64    = ''
+  checksum64    = 'D871B74F63C6472C65F8A0A1A9304DBCE1003AF2E1E4332B230570B4559FA753'
   checksumType64= 'sha256' #default is checksumType
 
   # MSI
-  silentArgs    = "/qn /norestart /l*v `"$($env:TEMP)\$($packageName).$($env:chocolateyPackageVersion).MsiInstall.log`"" # ALLUSERS=1 DISABLEDESKTOPSHORTCUT=1 ADDDESKTOPICON=0 ADDSTARTMENU=0
-  validExitCodes= @(0, 3010, 1641)
+  #silentArgs    = "/qn /norestart /l*v `"$($env:TEMP)\$($packageName).$($env:chocolateyPackageVersion).MsiInstall.log`"" # ALLUSERS=1 DISABLEDESKTOPSHORTCUT=1 ADDDESKTOPICON=0 ADDSTARTMENU=0
+  silentArgs    = "/qn /norestart /lvoicewarmupx `"$($env:TEMP)\$($packageName).$($env:chocolateyPackageVersion).MsiInstall.log`" IACCEPT=STORAGECRAFT.EULA" # ALLUSERS=1 DISABLEDESKTOPSHORTCUT=1 ADDDESKTOPICON=0 ADDSTARTMENU=0
+  #validExitCodes= @(0, 3010, 1641)
   # OTHERS
   # Uncomment matching EXE type (sorted by most to least common)
   #silentArgs   = '/S'           # NSIS
@@ -53,7 +54,7 @@ $packageArgs = @{
   # Note that some installers, in addition to the silentArgs above, may also need assistance of AHK to achieve silence.
   #silentArgs   = ''             # none; make silent with input macro script like AutoHotKey (AHK)
                                  #       https://chocolatey.org/packages/autohotkey.portable
-  #validExitCodes= @(0) #please insert other valid exit codes here
+  validExitCodes= @(0) #please insert other valid exit codes here
 }
 
 Install-ChocolateyPackage @packageArgs # https://chocolatey.org/docs/helpers-install-chocolatey-package
