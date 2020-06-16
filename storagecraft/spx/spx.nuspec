@@ -11,7 +11,7 @@
     <title>StorageCraft ShadowProtect SPX</title>
     <authors>StorageCraft</authors>
     <projectUrl>https://www.storagecraft.com/downloads/trials-updates</projectUrl>
-    <iconUrl>https://github.com/suprovsky/spx-chocolatey@master/storagecraft/icons/shadow-protect-spx.png</iconUrl>
+    <iconUrl>https://raw.githubusercontent.com/suprovsky/spx-chocolatey/master/storagecraft/icons/shadow-protect-spx.png</iconUrl>
     <licenseUrl>https://support.storagecraft.com/s/article/spx-licensing-options</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <docsUrl>https://support.storagecraft.com/s/article/shadowprotect-spx-user-guide</docsUrl>
