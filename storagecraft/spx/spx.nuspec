@@ -5,13 +5,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>spx</id>
-    <version>6.8.2</version>
-    <packageSourceUrl>https://github.com/thiagoeh/chocolatey</packageSourceUrl>
-    <owners>Thiago Hickmann</owners>
+    <version>6.8.4</version>
+    <packageSourceUrl>https://github.com/suprovsky/spx-chocolatey</packageSourceUrl>
+    <owners>Radosław Serba</owners>
     <title>StorageCraft ShadowProtect SPX</title>
     <authors>StorageCraft</authors>
     <projectUrl>https://www.storagecraft.com/downloads/trials-updates</projectUrl>
-    <iconUrl>https://cdn.jsdelivr.net/gh/thiagoeh/chocolatey@master/storagecraft/icons/shadow-protect-spx.png</iconUrl>
+    <iconUrl>https://github.com/suprovsky/spx-chocolatey@master/storagecraft/icons/shadow-protect-spx.png</iconUrl>
     <licenseUrl>https://support.storagecraft.com/s/article/spx-licensing-options</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <docsUrl>https://support.storagecraft.com/s/article/shadowprotect-spx-user-guide</docsUrl>
