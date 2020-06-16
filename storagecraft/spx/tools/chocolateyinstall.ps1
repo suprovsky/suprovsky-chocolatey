@@ -3,6 +3,13 @@ $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url        = 'https://downloads.storagecraft.com/SP_Files/ShadowProtect_SPX-6.8.4-5_x86.msi'
 $url64      = 'https://downloads.storagecraft.com/SP_Files/ShadowProtect_SPX-6.8.4-5_x64.msi'
 
+$pp = Get-PackageParameters
+if ($pp['ToolsOnly']) {
+  $packageArgs['silentArgs'] += " ADDLOCAL=TOOLS"
+}
+if ($pp['AgentOnly']) {
+  $packageArgs['silentArgs'] += " ADDLOCAL=AGENT"
+}
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
   unzipLocation = $toolsDir
