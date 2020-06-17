@@ -41,13 +41,13 @@ StorageCraft ShadowProtect SPX is the latest sector-based backup and disaster re
 * Changing Backup Destinations
 * Job Specific Logging
 
-  #### Package Parameters
-  The following package parameters can be set (minimum version: 6.5.0):
-   * `/ToolsOnly` - installs only the tools (GUI, Mount, Virtualboot)
-   * `/AgentOnly` - installs only the backup agent (it doesn't install the GUI, Mount, or Virtualboot)
-  Examples:
-  `choco install spx --package-parameters="/ToolsOnly"
-  `choco install spx --package-parameters="/AgentOnly"
+#### Package Parameters
+The following package parameters can be set (minimum version: 6.5.0):
+ * `/ToolsOnly` - installs only the tools (GUI, Mount, Virtualboot)
+ * `/AgentOnly` - installs only the backup agent (it doesn't install the GUI, Mount, or Virtualboot)
+ Examples:
+ `choco install spx --package-parameters="/ToolsOnly"`  
+ `choco install spx --package-parameters="/AgentOnly"`  
   In order to install full SPX application do not specify any parameters.
   </description>
     <summary>StorageCraft ShadowProtect SPX is a backup software that protect at the volume level, taking snapshots of protected devices.</summary>
